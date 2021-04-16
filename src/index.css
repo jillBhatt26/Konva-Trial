@@ -1,13 +1,102 @@
+/* General
+========================================== */
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    background-color: #2f3542;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* margins */
+.mt-5 {
+    margin-top: 50px;
+}
+
+/* Navbar
+========================================== */
+
+.nav {
+    width: 90%;
+    margin: 0 auto;
+    color: white;
+    display: flex;
+}
+
+.nav-left {
+    flex-grow: 3;
+}
+
+.nav-right {
+    flex-grow: 1;
+    margin-top: 30px;
+}
+
+.nav-right span {
+    display: inline-block;
+    margin-left: 50px;
+}
+
+/* Canvas
+========================================== */
+
+.stage {
+    max-width: 100%;
+}
+
+/* Picker
+======================================= */
+.color-picker {
+    width: 350px;
+    height: 140px;
+    margin: 20px 0;
+    background: white;
+}
+
+.color-picker .picker-ranges {
+    padding: 0 20px;
+}
+
+/* Toolbar
+======================================= */
+.toolbar {
+    background: #fff;
+    padding: 10px;
+}
+
+.toolbar-margin {
+    margin-top: 1000px;
+}
+
+.show-color {
+    width: 50px;
+    height: 50px;
+}
+
+/* Footer
+======================================= */
+footer {
+    color: #fff;
+    width: 68%;
+    margin: 50px auto;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+footer p {
+    float: left;
+}
+
+footer button {
+    float: right;
+    margin: 2px 30px 0 0;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    background: #16a085;
+    color: #fff;
+    font-size: 20px;
+}
+
+.group::after {
+    content: '';
+    display: table;
+    clear: both;
 }

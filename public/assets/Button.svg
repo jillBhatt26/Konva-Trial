@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="233" height="85" viewBox="0 0 233 85">
+    <g transform="translate(-115 -94)">
+        <rect width="233" height="85" transform="translate(115 94)" fill="#fa0"/>
+            <text transform="translate(140 153)" fill="#fff" font-size="40" font-family="SegoeUI, Segoe UI">
+                <tspan x="0" y="0">Book Now</tspan>
+            </text>
+    </g>
+</svg>
