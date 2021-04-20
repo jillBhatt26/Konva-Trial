@@ -12,19 +12,25 @@ import Button from './Button';
 
 const ImageCanvas = () => {
     // context
-    const { buttonColor, setStage } = useContext(AppContext);
+    const {
+        buttonColor,
+        setStage,
+        isButtonSelected,
+        setIsButtonSelected
+    } = useContext(AppContext);
 
     // component states
     // stage
     const [stageHeight] = useState(window.innerHeight);
     const [stageWidth] = useState(window.innerWidth);
-    const [isSelected, setIsSelected] = useState(false);
+    const [isDraggable, setIsDraggable] = useState(false);
 
     // stage background image
     const [bgImg, setBgImg] = useState(null);
 
     // ref
     const stageRef = useRef();
+    const buttonRef = useRef();
 
     // component life cycles
 
@@ -43,9 +49,36 @@ const ImageCanvas = () => {
     }, []);
 
     useEffect(() => {
+        const stage = stageRef.current;
         // set the stage
-        setStage(stageRef.current);
+        setStage(stage);
     }, [setStage]);
+
+    // Handle click events from refs
+    useEffect(() => {
+        const button = buttonRef.current;
+        const stage = stageRef.current;
+
+        button.addEventListener(
+            'click',
+            e => {
+                // TODO: set isButtonSelected to true
+                e.stopPropagation();
+                console.log('button clicked!');
+            },
+            false // prevent propagation in the bubbling phase
+        );
+
+        stage.addEventListener(
+            'click',
+            e => {
+                // TODO: set isButtonSelected to false
+                e.stopPropagation();
+                console.log('stage clicked!');
+            },
+            false // prevent propagation in the bubbling phase
+        );
+    }, []);
 
     return (
         <div className="container">
@@ -90,11 +123,15 @@ const ImageCanvas = () => {
                     </Layer>
 
                     {/* Button */}
-                    <Layer>
+                    <Layer ref={buttonRef}>
                         <Button
                             buttonColor={buttonColor}
-                            onSelect={() => setIsSelected(!isSelected)}
-                            isSelected={isSelected}
+                            onSelect={() => {
+                                setIsButtonSelected(!isButtonSelected);
+                                setIsDraggable(!isDraggable);
+                            }}
+                            isButtonSelected={isButtonSelected}
+                            isDraggable={isDraggable}
                         />
                     </Layer>
 

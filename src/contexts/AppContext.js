@@ -9,6 +9,8 @@ const AppContextProvider = ({ children }) => {
     const [blue, setBlue] = useState(0);
     const [buttonColor, setButtonColor] = useState('#000');
 
+    const [isButtonSelected, setIsButtonSelected] = useState(false);
+
     const [stage, setStage] = useState(null);
 
     return (
@@ -23,7 +25,9 @@ const AppContextProvider = ({ children }) => {
                 buttonColor,
                 setButtonColor,
                 stage,
-                setStage
+                setStage,
+                isButtonSelected,
+                setIsButtonSelected
             }}
         >
             {children}

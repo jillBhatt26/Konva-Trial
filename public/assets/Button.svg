@@ -1,8 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="233" height="85" viewBox="0 0 233 85">
-    <g transform="translate(-115 -94)">
-        <rect width="233" height="85" transform="translate(115 94)" fill="#fa0"/>
-            <text transform="translate(140 153)" fill="#fff" font-size="40" font-family="SegoeUI, Segoe UI">
-                <tspan x="0" y="0">Book Now</tspan>
-            </text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 185.33 91.33">
+    <title>Button</title>
+
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="Layer_1-2" data-name="Layer 1">
+            <path d="M173.33,91.33H12a12,12,0,0,1-12-12V12A12,12,0,0,1,12,0H173.33a12,12,0,0,1,12,12V79.33A12,12,0,0,1,173.33,91.33Z" style="fill:#f57e20"/>
+        </g>
     </g>
 </svg>
